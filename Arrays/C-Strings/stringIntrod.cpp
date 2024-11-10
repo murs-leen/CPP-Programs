@@ -8,7 +8,7 @@ int main()
 
     // we don't need to add null character at the end when we initilize the string with double
     // quotes.compiler explicitly add this null character
-    char str1[6] = "mursl";
+    char str1[10] = "mursleen";
     int leng =  strlen(str1);
     cout << str << " " << leng << endl;
     return 0;
