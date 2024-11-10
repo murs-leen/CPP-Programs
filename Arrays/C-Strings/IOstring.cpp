@@ -5,9 +5,9 @@ int main()
 {
     // input in c-string usign cin.getline(variableName, Size, delimiter)
     // => delimiter: on which specific character you want to stop input string
-    char str[100];
+    char str[10];
     cout << "Enter a char string: ";
-    cin.getline(str,100);
+    cin.getline(str,10);
     cout << str << endl;
 
     // counting lenght using loop
