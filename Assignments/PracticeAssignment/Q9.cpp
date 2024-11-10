@@ -1,4 +1,5 @@
 #include <iostream>
+#include<cmath>
 using namespace std;
 int main()
 {
@@ -32,7 +33,8 @@ int main()
 
     for (int i = 2; i <= num; i++)
     {
-        for (int j = 2; j < i; j++)
+        int tmp = int(sqrt(i));
+        for (int j = 2; j <= tmp; j++)
         {
             if (i % j == 0)
             {
@@ -49,7 +51,7 @@ int main()
             gap2 = diff;
 
             // if current gap is larger or equal to the previous gap bt consecutive two numbers
-            if (gap1 <= gap2)
+            if (gap1 < gap2)
             {
                 gap1 = gap2;
 

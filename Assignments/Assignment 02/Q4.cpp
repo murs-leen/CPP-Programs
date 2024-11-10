@@ -34,9 +34,10 @@ int main()
             return 1;
         }
     // Age of applicant
-    basePremium = (age < 18) ? 2000 : (age <= 30) ? 3500
-                              : (age <= 50)   ? 5000
-                                              : 8000;
+    basePremium = (age < 18) 
+                        ? 2000 : (age <= 30) 
+                        ? 3500 : (age <= 50)  
+                        ? 5000 : 8000;
     // Pre-existing conditions
     if(preConditions == 1) premium = basePremium + basePremium * 0.25; //25% add in basePremium and assign to premium
     else if(preConditions > 1) premium = basePremium + basePremium * 0.5; //50% add in basePremium assign to premium
