@@ -7,6 +7,8 @@ int main()
 {
     // copying data of one string to other
     char str1[10] = "Zahid";
+    
+
     char str2[35] = "FAST NUCES CFD";
 
     // To find lenght of c-string

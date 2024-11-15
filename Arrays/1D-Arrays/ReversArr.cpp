@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    const int S = 9;
+    const int S = 10;
     int arr[S] = {0};
     int size = sizeof(arr)/sizeof(arr[0]);
     cout << "Enter 10 integer values: ";
@@ -23,7 +23,8 @@ int main()
     int st = 0, ed = S-1;
     for(int j = 0; j < S/2; j++)
     {
-       swap(arr[st],arr[ed]);
+        arr[st] = arr[ed];
+    //    swap(arr[st],arr[ed]);
        st++;
        ed--;
     }

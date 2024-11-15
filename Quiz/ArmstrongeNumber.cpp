@@ -1,7 +1,7 @@
 // Armstronge number 1634 => 1^4 + 6^4 + 3^4 + 4^4 = 1634
 
 #include<iostream>
-#include<math.h>
+#include<cmath>
 using namespace std;
 int main(){
     unsigned int num, originalNum2, sum = 0, originalNum,remainder, i = 0, count = 0;
@@ -22,13 +22,12 @@ int main(){
         sum += pow(remainder, i);
         originalNum /= 10;
         count ++;        
-
     }
     if(sum == originalNum2){
-        cout << originalNum2 << " is an armstrogne number." << endl;
+        cout << originalNum2 << " is an armstrong number." << endl;
     }
     else{
-        cout << originalNum2 << " is not an armstronge number." << endl;
+        cout << originalNum2 << " is not an armstrong number." << endl;
     }
     return 0;
 }
