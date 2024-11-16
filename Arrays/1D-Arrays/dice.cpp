@@ -6,7 +6,7 @@ int main(){
     int freq[7] = {0};
     
     // this stores values on the each index of rolls form 1 to 6
-    for(int i = 0; i< S; i++)
+    for(int i = 0; i < S; i++)
         rolls[i] = rand() % 6  + 1;
     
     // this loop count the specific value on each index form 1 to 6
