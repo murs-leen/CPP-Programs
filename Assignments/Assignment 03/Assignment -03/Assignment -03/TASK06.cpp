@@ -67,7 +67,7 @@ int main()
                     {
                         arr[i][j] = ' ';
                         cout << arr[i][j];
-                    }     
+                    }
                 }
                 cout << endl;
             }
@@ -87,16 +87,16 @@ int main()
             cin >> choice;
             switch (choice)
             {
-            //Top-Left
+                //Top-Left
             case 1:
                 cout << "\n(Right Triangle - Top-Left)" << endl;
-                for(int i = size; i >= 1; i--)
+                for (int i = size; i >= 1; i--)
                 {
-                     for(int j = i; j >= 1; j--)
-                     {
-                      arr[i][j] = '*';
-                      cout << arr[i][j];
-                     }
+                    for (int j = i; j >= 1; j--)
+                    {
+                        arr[i][j] = '*';
+                        cout << arr[i][j];
+                    }
                     cout << endl;
                 }
                 break;
@@ -139,7 +139,7 @@ int main()
                 spaceCount = size - 1;
                 for (int i = 0; i < size; i++)
                 {
-                    for (int j = 0; j < spaceCount; j++) 
+                    for (int j = 0; j < spaceCount; j++)
                     {
                         arr[i][j] = ' ';
                         cout << arr[i][j];
@@ -157,5 +157,5 @@ int main()
         }
     }
     cout << "GoodBye..(:" << endl;
-        return 0;
+    return 0;
 }
