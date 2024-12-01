@@ -6,7 +6,6 @@ bool isAlphaNum(char a)
 {
     if ((a >= '0' && a <= '9') || (tolower(a) >= 'a' && tolower(a) <= 'z'))
         return true;
-
     return false;
 }
 int main()

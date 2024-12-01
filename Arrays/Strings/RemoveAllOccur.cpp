@@ -6,7 +6,8 @@ int main()
     string str1 = "abcabbcabc";
     string str2;
     getline(cin,str2);
-    while(str1.find(str2) < str1.length()){
+    while(str1.find(str2) < str1.length())
+    {
         str1.erase(str1.find(str2),str2.length());  
         cout << str1 << " "; 
     }

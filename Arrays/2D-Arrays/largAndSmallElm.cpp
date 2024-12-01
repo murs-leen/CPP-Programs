@@ -27,7 +27,7 @@ int main()
     }
     cout << endl;
     
-    // Largest smallest in each col
+    // Largest, smallest in each col
     for (int i = 0; i < col; i++)
     {
         int largest = arr[0][i];
