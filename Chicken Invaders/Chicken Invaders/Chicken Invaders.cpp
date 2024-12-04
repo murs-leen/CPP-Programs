@@ -40,7 +40,7 @@ int main()
 		moveDucks();
 		checkCollisions();
 		moveFire();
-		Sleep(0);
+		Sleep(50);
 		if (_kbhit())
 		{
 			char ch = _getch();
