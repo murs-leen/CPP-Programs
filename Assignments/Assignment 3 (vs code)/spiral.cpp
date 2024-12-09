@@ -5,7 +5,7 @@ int main()
     const int rows = 100;
     const int cols = 100;
     int arr[rows][cols];
-    int spiral[rows] = { 0 };
+    int spiral[rows] = {0};
     int noOfRows, noOfCols;
     cout << "Enter the number of rows:";
     cin >> noOfRows;
@@ -51,7 +51,7 @@ int main()
         }
         left++;
     }
-    int sortedArr[rows] = { 0 };
+    int sortedArr[rows] = {0};
     int evenIdx = 0, oddIdx = 0;
 
     for (int i = 0; i < noOfCols * noOfRows; i++)
@@ -81,7 +81,7 @@ int main()
     }
 
     //sorting odd number
-    for (int i = evenIdx; i < noOfCols * noOfRows; i++)
+    for (int i = evenIdx; i < noOfCols * noOfRows ; i++)
     {
         for (int j = i + 1; j < noOfCols * noOfRows; j++)
         {
@@ -96,5 +96,5 @@ int main()
 
     cout << "Spiral : ";
     for (int i = 0; i < noOfCols * noOfRows; i++)
-        cout << spiral[i] << " ";
+        cout << sortedArr[i] << " ";
 }

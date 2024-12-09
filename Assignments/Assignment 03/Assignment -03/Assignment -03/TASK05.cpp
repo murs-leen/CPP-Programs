@@ -1,80 +1,69 @@
-//#include <iostream>
+//#include<iostream>
 //using namespace std;
-//
 //int main() {
-//    const int MAX_SIZE = 200; // Maximum size of the matrix
-//    int matrix[MAX_SIZE][MAX_SIZE] = { 0 };
-//    int n, m;
-//
-//    // Step 1: Input dimensions of the matrix
+//    const int S = 200;
+//    int matrix[S][S] = { 0 };
+//    int noOfRows, noOfCols;
 //    cout << "Enter the number of rows (n): ";
-//    cin >> n;
+//    cin >> noOfRows;
 //    cout << "Enter the number of columns (m): ";
-//    cin >> m;
+//    cin >> noOfCols;
 //    cout << "Enter the elements of the matrix:" << endl;
-//    for (int i = 0; i < n; i++) {
-//        for (int j = 0; j < m; j++) {
+//    for (int i = 0; i < noOfRows; i++) {
+//        for (int j = 0; j < noOfCols; j++) {
 //            cin >> matrix[i][j];
 //        }
 //    }
-//    int spiralSum = 0, loopVar = 0;
-//    int top = 0, bottom = n - 1, left = 0, right = m - 1;
+//    int spiralSum = 0;
+//    int top = 0, bottom = noOfRows - 1, left = 0, right = noOfCols - 1;
 //
-//    while (loopVar < m * n) {
-//        // Traverse from left to right on the top row
-//        for (int i = left; i <= right; i++) {
+//    while (top <= bottom && left <= right)
+//    {
+//        // top
+//        for (int i = left; i <= right; i++)
+//        {
 //            spiralSum += matrix[top][i];
 //        }
-//        top++; // Move top boundary down
+//        top++;
 //
-//        // Traverse from top to bottom on the right column
-//        for (int i = top; i <= bottom; i++) {
+//        // Right
+//        for (int i = top; i <= bottom; i++)
+//        {
 //            spiralSum += matrix[i][right];
 //        }
-//        right--; // Move right boundary left
-//
-//        // Traverse from right to left on the bottom row
-//        if (top <= bottom) {
-//            for (int i = right; i >= left; i--) {
-//                spiralSum += matrix[bottom][i];
-//            }
-//            bottom--; // Move bottom boundary up
-//        }
-//
-//        // Traverse from bottom to top on the left column
-//        if (left <= right) {
-//            for (int i = bottom; i >= top; i--) {
-//                spiralSum += matrix[i][left];
-//            }
-//            left++; // Move left boundary right
-//        }
-//        loopVar++;
-//    }
-//
-//    // Step 3: Sort Each Row
-//    for (int i = 0; i < m; i++) 
-//    {
-//        for (int j = 0; j < n - 1; j++) 
+//        right--;
+//        // Bottom
+//        for (int i = right; i >= left; i--)
 //        {
-//            int minIndex = j;
-//            for (int k = j + 1; k < n; k++) 
-//            {
-//                if (matrix[i][k] < matrix[i][minIndex])
-//                {
-//                    minIndex = k;
+//            spiralSum += matrix[bottom][i];
+//        }
+//        bottom--;
+//        // Left
+//        for (int i = bottom; i >= top; i--)
+//        {
+//            spiralSum += matrix[i][left];
+//        }
+//        left++;
+//    }
+//    
+//    // Sort Each Row
+//    for (int i = 0; i < noOfRows; i++){
+//        int count = 1;
+//         for (int j = 0; j < noOfCols - 1; j++){
+//            for (int k = count; k < noOfCols; k++){
+//                if (matrix[i][j] > matrix[i][k]){
+//                    int temp = matrix[i][k];
+//                    matrix[i][k] = matrix[i][j];
+//                    matrix[i][j] = temp;
 //                }
 //            }
-//            int temp = matrix[i][j];
-//            matrix[i][j] = matrix[i][minIndex];
-//            matrix[i][minIndex] = temp;
-//        }
+//            count++;
+//         }
 //    }
-//
-//    // Step 4: Output the Spiral Sum and the Modified Matrix
 //    cout << "Spiral Sum: " << spiralSum << endl;
 //    cout << "Modified Matrix with Sorted Rows:" << endl;
-//    for (int i = 0; i < n; i++) {
-//        for (int j = 0; j < m; j++) {
+//    for (int i = 0; i < noOfRows; i++) {
+//        for (int j = 0; j < noOfCols; j++) {
 //            cout << matrix[i][j] << " ";
 //        }
 //        cout << endl;

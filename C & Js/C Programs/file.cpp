@@ -73,10 +73,9 @@ int main()
 				case 'o':
 					gameOver();
 					break;
-				case '\r':
-					menu();
-                    break;
 				}
+				case '\n':
+					menu();
 			}
 			gotoxy(0, 0);
 		}
@@ -140,11 +139,11 @@ char menu()
 }
 void instructions()
 {
-	cout << "\n -> 'W' to move your space ship Above" << endl;
-	cout << "\n -> 'S' to move your space ship Down" << endl;
-	cout << "\n -> 'D' to move your space ship Right" << endl;
-	cout << "\n -> 'A' to move your space ship Left" << endl;
-	cout << "\n -> 'O' to Exit" << endl;
+	cout << "\n -> \'W'\ to move your space ship Above" << endl;
+	cout << "\n -> \'S'\ to move your space ship Down" << endl;
+	cout << "\n -> \'D'\ to move your space ship Right" << endl;
+	cout << "\n -> \'A'\ to move your space ship Left" << endl;
+	cout << "\n -> \'O'\ to Exit" << endl;
 	cout << "\n\n Press any key to continue...";
 	_getch();
 	menu();
