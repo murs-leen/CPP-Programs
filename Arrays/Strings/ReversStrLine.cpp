@@ -19,7 +19,8 @@ int main()
     i =  0,st = 0, ed = 0;
     while (i < str.length())
     {
-        if(str[i] == ' ' || i == str.length() - 1){
+        if(str[i] == ' ' || i == str.length() - 1)
+        {
             if(i == str.length() - 1)
                 ed = i;
             else

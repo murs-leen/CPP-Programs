@@ -59,6 +59,7 @@ int main()
         if (spiral[i] % 2 == 0)
             sortedArr[evenIdx++] = spiral[i];
     }
+
     // sorting even numbers
     for (int i = 0; i < evenIdx; i++)
     {
@@ -96,5 +97,5 @@ int main()
 
     cout << "Spiral : ";
     for (int i = 0; i < noOfCols * noOfRows; i++)
-        cout << spiral[i] << " ";
+        cout << sortedArr[i] << " ";
 }
